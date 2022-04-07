@@ -31,11 +31,11 @@ public class Game {
 		logger.log();
 		logger.log(" First Player Cards : ");
 		for(i=0;i<player1.size();i++) {
-			System.out.print(player1.get(i).getRank()+" "+player1.get(i).getSuit()+" ");
+			logger.log(player1.get(i).getRank()+" "+player1.get(i).getSuit()+" ");
 		}
 		logger.log(" Second Player Cards : ");
 		for(i=0;i<player2.size();i++) {
-			System.out.print(player2.get(i).getRank()+" "+player2.get(i).getSuit()+" ");
+			logger.log(player2.get(i).getRank()+" "+player2.get(i).getSuit()+" ");
 		}
 		logger.log();
 		player1.receiveInitialCards(player1);
@@ -62,7 +62,7 @@ public class Game {
 				}
 				else {
 					topCard=play2.playCard();
-					System.out.println("TopCard : "+topCard.getRank()+" "+topCard.getSuit());
+					logger.log("TopCard : "+topCard.getRank()+" "+topCard.getSuit());
 					if(topCard.getRank()==Rank.EIGHT && play2.myCards.size()!=0) {
 						decCard=play2.declareSuit();
 					}
@@ -79,7 +79,7 @@ public class Game {
 				}
 				else {
 					topCard=player1.playCard();
-					System.out.println("TopCard : "+topCard.getRank()+" "+topCard.getSuit());
+					logger.log("TopCard : "+topCard.getRank()+" "+topCard.getSuit());
 					if(topCard.getRank().equals(Rank.EIGHT) && player1.myCards.size()!=0) {
 						decCard=player1.declareSuit();
 					}
