@@ -28,16 +28,16 @@ public class Game {
 				player1.add(deck.get(0));
 			deck.remove(0);			
 		}
-		System.out.println();
-		System.out.println(" First Player Cards : ");
+		logger.log();
+		logger.log(" First Player Cards : ");
 		for(i=0;i<player1.size();i++) {
 			System.out.print(player1.get(i).getRank()+" "+player1.get(i).getSuit()+" ");
 		}
-		System.out.println(" Second Player Cards : ");
+		logger.log(" Second Player Cards : ");
 		for(i=0;i<player2.size();i++) {
 			System.out.print(player2.get(i).getRank()+" "+player2.get(i).getSuit()+" ");
 		}
-		System.out.println();
+		logger.log();
 		player1.receiveInitialCards(player1);
 		player2.receiveInitialCards(player2);
 		return deck;
@@ -49,7 +49,7 @@ public class Game {
 		Card topCard;
 		topCard=deck.get(0);
 		deck.remove(0);
-		System.out.println("TopCard : "+topCard.getRank()+" "+topCard.getSuit());
+		logger.log("TopCard : "+topCard.getRank()+" "+topCard.getSuit());
 		Card.Suit decCard=null;
 		while(point1<200 && point2<200) 
 		{
@@ -88,11 +88,11 @@ public class Game {
 			}
 			if(player1.myCards.size()==0 || deck.size()==0) {
 				point2+=player2.getScore();
-				System.out.println("player2 :"+point2);
+				logger.log("player2 :"+point2);
 			}
 			if(player2.myCards.size()==0 || deck.size()==0) {
 				point1+=player1.getScore();
-				System.out.println("player1 :"+point1);
+				logger.log("player1 :"+point1);
 			}
 			if(deck.size()==0 && point1<200 && point2<200) {
 				deck=Card.getDeck();
@@ -105,10 +105,10 @@ public class Game {
 	
 	void results(int p1,int p2) {
 		if(p1 >= 200) {
-			System.out.println("Player2 wins");
+			logger.log("Player2 wins");
 		}
 		else if(p2 >= 200) {
-			System.out.println("Player1 wins");
+			logger.log("Player1 wins");
 		}
 	}
 
