@@ -1,5 +1,4 @@
 package com.example;
-
 public class TicTacToe {
           public static Evaluation evaluateBoard(String board) {
                   board = board.toLowerCase();
