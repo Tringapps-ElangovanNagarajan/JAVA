@@ -6,6 +6,10 @@ public class TicTacToe {
                   if(board.length() != 9) {
                           return Evaluation.InvalidInput;
                   }
+                  private TicTacToe() {
+                              throw new IllegalStateException("Utility class");
+                  }
+                    
                   int xCount = 0;
                   int oCount = 0;
                   for(int i = 0; i < board.length(); i++) {
