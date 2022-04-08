@@ -28,7 +28,7 @@ public class TicTacToe {
                   if(xWins && oWins) {
                           return Evaluation.UnreachableState;
                   }
-                  if(xWins) {
+                  else if(xWins) {
                           return Evaluation.Xwins;
                   }
                   else if(oWins) {
