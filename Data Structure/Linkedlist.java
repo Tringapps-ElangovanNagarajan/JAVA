@@ -78,7 +78,7 @@ class List<T> {
 	}
 }
 
-public class LinkedList {
+public class Linkedlist {
 public static void main(String a[]) {
 	Scanner sc=new Scanner(System.in);
 	List<Integer> li =new List<Integer>();
