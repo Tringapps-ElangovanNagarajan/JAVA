@@ -39,7 +39,7 @@ class Stack<T> {
 public class StackList {
 public static void main(String args[]) {
 	Stack<Integer> li=new Stack<Integer>();
-	scanner sc=new scanner(System.in);
+	Scanner sc=new Scanner(System.in);
 	while(true) {
 	System.out.println("1.Push");
 	System.out.println("2.Pop");
